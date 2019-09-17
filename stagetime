@@ -4,10 +4,10 @@ agent any
 stages {
  stage ('build'){
 input{
-  message "please specify environment:"
+  message "please specify environment:"dev"
   ok "ok"
   submitter "user1,admin@gmail.com"
-  submitterParameter "who is submitter"
+  submitterParameter "user1"
                    parameters{
                       string(name: 'environment', defaultValue: 'dev', description: 'environment to build for (valid values: dev, test, prod)')
                       string(name: 'version', defaultValue: '1.0', description: 'version number to build for')
